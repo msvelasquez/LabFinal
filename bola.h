@@ -27,6 +27,8 @@ public:
     float getAy() const;
     void setAy(float newAy);
 
+    void mover(float dt);
+
 private:
     float px;
     float py;

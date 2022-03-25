@@ -4,6 +4,7 @@
 #include <QPainter>
 #include <QGraphicsItem>
 #include "bola.h"
+#define DT 0.1
 
 class bolagraf : public QGraphicsItem
 {
@@ -13,6 +14,8 @@ public:
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     void pos(int v_lim);
+    void actualizar(int v_lim);
+    bola* getesfera();
 private:
     bola *esfera;
     float escala;

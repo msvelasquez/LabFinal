@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include "bolagraf.h"
-#include <QDebug>
 #include <QTimer>
 
 QT_BEGIN_NAMESPACE
@@ -18,6 +17,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void bordercollision(bolagraf *b);
+
+private slots:
+    void actualizar();
 
 private:
     Ui::MainWindow *ui;
@@ -25,5 +28,6 @@ private:
     bolagraf *obj;
     int h_limit=500;
     int v_limit=500;
+    QTimer *movimiento;
 };
 #endif // MAINWINDOW_H

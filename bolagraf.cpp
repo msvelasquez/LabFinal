@@ -26,3 +26,14 @@ void bolagraf::pos(int v_lim)
 {
     setPos(esfera->getPx()*escala,v_lim-(esfera->getPy()*escala));
 }
+
+void bolagraf::actualizar(int v_lim)
+{
+    esfera->mover(DT);
+    pos(v_lim);
+}
+
+bola *bolagraf::getesfera()
+{
+    return esfera;
+}

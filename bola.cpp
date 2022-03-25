@@ -71,3 +71,10 @@ void bola::setAy(float newAy)
 {
     ay = newAy;
 }
+
+void bola::mover(float dt){
+    vx = vx+(ax*dt);
+    vy = vy-0.98;
+    px += vx*dt;
+    py += vy*dt;
+}
